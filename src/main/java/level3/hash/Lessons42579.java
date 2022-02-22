@@ -1,24 +1,24 @@
-package level_3.hash;
+package level3.hash;
 
 import java.util.*;
 
-public class Lessons_42579 {
+public class Lessons42579 {
     public int[] solution(String[] genres, int[] plays) {
         List<Integer> list = new ArrayList<>();
-        HashMap<String, Integer> total_plays = new HashMap<>();
+        HashMap<String, Integer> totalPlays = new HashMap<>();
         ArrayList<Song> songs = new ArrayList<>();
 
         for (int i = 0; i < genres.length; i++) {
-            total_plays.put(genres[i], total_plays.getOrDefault(genres[i], 0) + plays[i]);
+            totalPlays.put(genres[i], totalPlays.getOrDefault(genres[i], 0) + plays[i]);
             songs.add(new Song(i, genres[i], plays[i]));
         }
 
         songs.sort((s1, s2) -> s2.plays - s1.plays);
 
-        List<Map.Entry<String, Integer>> list_entry = new ArrayList<>(total_plays.entrySet());
-        list_entry.sort((obj1, obj2) -> obj2.getValue().compareTo(obj1.getValue()));
+        List<Map.Entry<String, Integer>> listEntry = new ArrayList<>(totalPlays.entrySet());
+        listEntry.sort((obj1, obj2) -> obj2.getValue().compareTo(obj1.getValue()));
 
-        for (Map.Entry<String, Integer> entry : list_entry) {
+        for (Map.Entry<String, Integer> entry : listEntry) {
             int temp = 0;
             for (Song song : songs) {
                 if (entry.getKey().equals(song.genre) && temp < 2) {
