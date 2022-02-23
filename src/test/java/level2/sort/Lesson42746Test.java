@@ -9,13 +9,24 @@ import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class Lessons42746Test {
+class Lesson42746Test {
 
     @DisplayName("가장 큰 수 테스트")
     @ParameterizedTest
     @MethodSource("provideArguments")
     void test(int[] numbers, String expected) {
-        Lessons42746 lesson = new Lessons42746();
+        Lesson42746 lesson = new Lesson42746();
+
+        String solution = lesson.solution(numbers);
+
+        assertThat(solution).isEqualTo(expected);
+    }
+
+    @DisplayName("가장 큰 수 테스트2")
+    @ParameterizedTest
+    @MethodSource("provideArguments")
+    void testOtherSolution(int[] numbers, String expected) {
+        Lesson42746Other lesson = new Lesson42746Other();
 
         String solution = lesson.solution(numbers);
 

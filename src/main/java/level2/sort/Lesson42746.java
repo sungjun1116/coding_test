@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Lessons42746 {
+public class Lesson42746 {
 
     public String solution(int[] numbers) {
         List<String> arr = Arrays.stream(numbers)

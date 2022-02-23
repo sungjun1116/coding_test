@@ -9,13 +9,13 @@ import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class Lessons43165Test {
+class Lesson43165Test {
 
     @DisplayName("타겟 넘버 테스트")
     @ParameterizedTest
     @MethodSource("provideArguments")
     void test(int numbers[], int target, int expected) {
-        Lessons43165 lesson = new Lessons43165();
+        Lesson43165 lesson = new Lesson43165();
 
         int actual = lesson.solution(numbers, target);
 

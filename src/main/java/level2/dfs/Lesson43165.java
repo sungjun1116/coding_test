@@ -1,6 +1,6 @@
 package level2.dfs;
 
-public class Lessons43165 {
+public class Lesson43165 {
 
     private int answer;
 

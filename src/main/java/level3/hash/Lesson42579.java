@@ -2,7 +2,7 @@ package level3.hash;
 
 import java.util.*;
 
-public class Lessons42579 {
+public class Lesson42579 {
     public int[] solution(String[] genres, int[] plays) {
         List<Integer> list = new ArrayList<>();
         HashMap<String, Integer> totalPlays = new HashMap<>();
